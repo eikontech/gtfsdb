@@ -17,7 +17,7 @@ from gtfsdb.model.stop_time import StopTime  # noqa
 from gtfsdb.model.transfer import Transfer  # noqa
 from gtfsdb.model.trip import Trip  # noqa
 from gtfsdb.model.block import Block  # noqa
-
+from gtfsdb.model.stop_events import StopEvents # noqa
 
 SORTED_CLASS_NAMES = [
     RouteType.__name__,
@@ -42,6 +42,7 @@ SORTED_CLASS_NAMES = [
     FareAttribute.__name__,
     FareRule.__name__,
     UniversalCalendar.__name__,
+    StopEvents.__name__,
 ]
 
 
