@@ -5,7 +5,7 @@ from gtfsdb import config
 from gtfsdb.model.base import Base
 
 
-class StopEvents(Base):
+class StopEvent(Base):
     datasource = None
     filename = None
 
