@@ -19,6 +19,7 @@ class Trip(Base):
     route_id = Column(String(255), index=True, nullable=False)
     service_id = Column(String(255), index=True, nullable=False)
     direction_id = Column(Integer, index=True)
+    route_pattern_id = Column(String(255), index=True)
     block_id = Column(String(255), index=True)
     shape_id = Column(String(255), index=True, nullable=True)
     trip_type = Column(String(255))
