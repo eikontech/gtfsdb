@@ -16,15 +16,13 @@ class RoutePattern(Base):
 
     __tablename__ = 'route_patterns'
 
-    id = Column(Integer, Sequence(None, optional=True),
-                primary_key=True, nullable=True)
-    route_pattern_id = Column(String(255), nullable=False)
-    route_id = Column(String(255), nullable=False)
+    route_pattern_id = Column(String(255), primary_key=True, index=True, nullable=False)
+    route_id = Column(String(255), index=True, nullable=False)
     route_short_name = Column(String(255), nullable=False)
     direction_id = Column(String(255), nullable=False)
     trip_headsign = Column(String(255), nullable=False)
     representative_trip_id = Column(String(255), nullable=False)
-    route_pattern_sort_order = Column(Integer, nullable=False)
+    route_pattern_sort_order = Column(Integer, index=True, nullable=False)
     n_trips = Column(Integer, nullable=False)
     shape_id = Column(String(255), nullable=False)
 
