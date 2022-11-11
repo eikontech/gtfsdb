@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Sequence
-from sqlalchemy.types import Integer, String
+from sqlalchemy.types import Integer, String, DateTime
 
 from gtfsdb import config
 from gtfsdb.model.base import Base
@@ -11,12 +11,10 @@ class StopEvent(Base):
 
     __tablename__ = 'stop_events'
 
-    id = Column(Integer, Sequence(None, optional=True), primary_key=True, nullable=True)
-    vehicle_id = Column(String(255), nullable=False)
-    stop_id = Column(String(255), nullable=False)
+    vehicle_id = Column(String(255), primary_key=True, index=True, nullable=False)
+    stop_id = Column(String(255), primary_key=True, index=True, nullable=False)
     stop_name = Column(String(255))
-    stop_sequence = Column(Integer, nullable=False)
-    arrival_time = Column(String(255), nullable=False)
-    departure_time = Column(String(255), nullable=False)
+    arrival_time = Column(DateTime(), primary_key=True, index=True, nullable=False)
+    departure_time = Column(DateTime(), nullable=False)
     boardings = Column(Integer)
     alightings = Column(Integer)
