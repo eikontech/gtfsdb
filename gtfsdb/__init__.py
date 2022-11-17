@@ -19,6 +19,7 @@ from gtfsdb.model.trip import Trip  # noqa
 from gtfsdb.model.block import Block  # noqa
 from gtfsdb.model.route_pattern import RoutePattern # noqa
 from gtfsdb.model.stop_event import StopEvent # noqa
+from gtfsdb.model.vehicle_trip import VehicleTrip # noqa
 
 SORTED_CLASS_NAMES = [
     RouteType.__name__,
@@ -45,6 +46,7 @@ SORTED_CLASS_NAMES = [
     UniversalCalendar.__name__,
     RoutePattern.__name__,
     StopEvent.__name__,
+    VehicleTrip.__name__,
 ]
 
 
