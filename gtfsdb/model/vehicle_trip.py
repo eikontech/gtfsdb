@@ -13,4 +13,4 @@ class VehicleTrip(Base):
 
     vehicle_id = Column(String(255), primary_key=True, index=True, nullable=False)
     trip_id = Column(String(255), primary_key=True, index=True, nullable=False)
-    date = Column(Date(), primary_key=True, index=True, nullable=False)
+    datetime = Column(Date(), primary_key=True, index=True, nullable=False)
