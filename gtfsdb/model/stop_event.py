@@ -11,10 +11,12 @@ class StopEvent(Base):
 
     __tablename__ = 'stop_events'
 
-    vehicle_id = Column(String(255), primary_key=True, index=True, nullable=False)
-    stop_id = Column(String(255), primary_key=True, index=True, nullable=False)
+    trip_id = Column(String(255), primary_key=True, index=True, nullable=False)
+    stop_id = Column(String(255), nullable=False)
+    stop_sequence = Column(Integer, primary_key=True, index=True, nullable=False)
     stop_name = Column(String(255))
-    arrival_time = Column(DateTime(), primary_key=True, index=True, nullable=False)
-    departure_time = Column(DateTime(), nullable=False)
-    boardings = Column(Integer)
-    alightings = Column(Integer)
+    vehicle_id = Column(String(255), nullable=False)
+    arrival_datetime = Column(DateTime(), primary_key=True, index=True, nullable=False)
+    departure_datetime = Column(DateTime(), nullable=False)
+    boarding = Column(Integer)
+    alighting = Column(Integer)
